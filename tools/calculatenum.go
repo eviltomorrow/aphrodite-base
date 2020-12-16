@@ -42,10 +42,13 @@ func CalcalateMaxFloat64(nums []float64) float64 {
 
 // CalcalateMinInt64 calculate min
 func CalcalateMinInt64(nums []int64) int64 {
-	var min int64
-	for _, num := range nums {
-		if num < min {
-			min = num
+	if len(nums) == 0 {
+		return 0
+	}
+	var min = nums[0]
+	for i := 1; i <= len(nums)-1; i++ {
+		if nums[i] < min {
+			min = nums[i]
 		}
 	}
 	return min
@@ -53,10 +56,13 @@ func CalcalateMinInt64(nums []int64) int64 {
 
 // CalcalateMinFloat64 calculate min
 func CalcalateMinFloat64(nums []float64) float64 {
-	var min float64
-	for _, num := range nums {
-		if num < min {
-			min = num
+	if len(nums) == 0 {
+		return 0
+	}
+	var min = nums[0]
+	for i := 1; i <= len(nums)-1; i++ {
+		if nums[i] < min {
+			min = nums[i]
 		}
 	}
 	return min
