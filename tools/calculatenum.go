@@ -1,5 +1,7 @@
 package tools
 
+import "math"
+
 // CalculateSumInt64 calculate sum
 func CalculateSumInt64(nums []int64) int64 {
 	var sum int64
@@ -66,4 +68,11 @@ func CalcalateMinFloat64(nums []float64) float64 {
 		}
 	}
 	return min
+}
+
+var n10 = math.Pow10(2)
+
+// Trunc2 trunc2
+func Trunc2(val float64) float64 {
+	return math.Trunc((val+0.5/n10)*n10) / n10
 }
